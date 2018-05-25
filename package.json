@@ -1,6 +1,6 @@
 {
-  "name": "numeral",
-  "version": "2.0.6",
+  "name": "@omniex/numeral",
+  "version": "2.0.600",
   "description": "Format and manipulate numbers.",
   "homepage": "http://numeraljs.com",
   "author": {
@@ -8,6 +8,12 @@
     "email": "adamwdraper@gmail.com",
     "url": "http://github.com/adamwdraper"
   },
+  "contributors": [
+    {
+      "name": "Nestor Toro",
+      "email": "npm@omniex.io"
+    }
+  ],
   "keywords": [
     "numeral",
     "number",
