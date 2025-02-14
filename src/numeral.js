@@ -394,8 +394,9 @@
 
             power = Math.pow(10, boundedPrecision);
 
-            // Multiply up by precision, round accurately, then divide and use native toFixed():
+            // Add custom function to deal with tiny numbers. 
             var valueToRound = value.toString().indexOf('e') >= 0 ? (value  *  power) : (value + 'e+' + boundedPrecision);
+            // Multiply up by precision, round accurately, then divide and use native toFixed():
             output = (roundingFunction(valueToRound) / power).toFixed(boundedPrecision);
 
             if (optionals > maxDecimals - boundedPrecision) {
