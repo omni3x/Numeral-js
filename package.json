@@ -1,6 +1,6 @@
 {
-  "name": "numeral",
-  "version": "2.0.6",
+  "name": "@omniex/numeral",
+  "version": "2.0.601",
   "description": "Format and manipulate numbers.",
   "homepage": "http://numeraljs.com",
   "author": {
@@ -51,7 +51,9 @@
     "uglify-js": "latest"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "build": "grunt dist",
+    "help": "grunt --help"
   },
   "ender": "./ender.js",
   "_id": "numeral@1.5.4",
