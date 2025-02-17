@@ -28,7 +28,7 @@ pipeline {
               minor = versions[1]
               patch = versions[2]
               tag = "${major}.${minor}.${patch}"
-              echo "new version ${tag}"
+              echo "release version ${tag} to artifactory"
             }
           } 
         }
