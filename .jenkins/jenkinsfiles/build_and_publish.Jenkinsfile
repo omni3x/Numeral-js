@@ -13,7 +13,7 @@ pipeline {
     stage('Get Current Version') {
       steps {            
         script {
-           withCredentials([string(credentialsId: 'github-molly-brown-pw', variable: 'GITHUB_TOKEN'), sshUserPrivateKey(credentialsId: 'github-molly-brown-ssh-key', keyFileVariable: 'GITHUB_KEY')]) {
+           withCredentials([sshUserPrivateKey(credentialsId: 'github-molly-brown-ssh-key', keyFileVariable: 'GITHUB_KEY')]) {
             withEnv(["GIT_SSH_COMMAND=ssh -i $GITHUB_KEY"]) {
               // find the latest tag from remote, default to 1.0.0 if it doesn't exist
               sh "git remote set-url origin git@github.com:omni3x/Numeral-js.git"
@@ -28,7 +28,7 @@ pipeline {
               minor = versions[1]
               patch = versions[2]
               tag = "${major}.${minor}.${patch}"
-              echo "new version ${tag}"
+              echo "release version ${tag} to artifactory"
             }
           } 
         }
